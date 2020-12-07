@@ -1,10 +1,12 @@
-import { StatusBar } from 'expo-status-bar';
 import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native'
 import { createMaterialTopTabNavigator } from '@react-navigation/material-top-tabs'
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs'
 import Constants from 'expo-constants'
+
+import Icon from 'react-native-vector-icons/Feather';
+import LinearGradient from 'react-native-linear-gradient';
 
 import A2_Temperature from './src/pages/A2_Temperature'
 import A2_Flow from './src/pages/A2_Flow'
@@ -24,7 +26,7 @@ const BottomTab = createBottomTabNavigator()
 
 function Home() {
   return (
-    <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
+    <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center'}}>
       <Text>Home</Text>
     </View>
   );
@@ -32,7 +34,37 @@ function Home() {
 
 function GroupA() {
   return (
-    <BottomTab.Navigator>
+    <BottomTab.Navigator
+      screenOptions={({ route }) => ({
+        tabBarIcon: ({ color, size }) => {
+          let iconName;
+    
+          switch (route.name) {
+            case 'A2_Temperature':
+              iconName = 'thermometer';
+              break;
+            case 'A2_Flow':
+              iconName = 'wind';
+              break;
+            case 'A2_percent':
+              iconName = 'edit';
+              break;
+            case 'A2_Level':
+              iconName = 'bell'
+            default:
+              iconName = 'bell';
+              break;
+          }
+    
+          return <Icon name={iconName} size={size} color={color} />;
+        },
+      })}
+        tabBarOptions={{
+        activeTintColor: '#9C27B0',
+        inactiveTintColor: '#777',
+        showLabel: false
+      }}
+    >
       <BottomTab.Screen name="A2_Temperature" component={A2_Temperature}/>
       <BottomTab.Screen name="A2_Flow" component={A2_Flow}/>
       <BottomTab.Screen name="A2_Humidity" component={A2_Humidity}/>
