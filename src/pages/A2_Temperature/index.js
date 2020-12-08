@@ -2,16 +2,21 @@ import * as React from 'react'
 import { View, Text } from 'react-native'
 import styles from './styles'
 import ProgressCircle from 'react-native-progress-circle'
+import { Circle } from 'react-native-svg'
+import SemiCircleProgress from '../../assets/Components/SemiCircleProgress'
+import StatisticsTheme from '../../assets/icons/StatisticsTheme'
 //import Pointer from '../../assets/svg_components/Pointer'
 //import Temperature from '../../assets/icons/Temperature'
 //import Flow from '../../assets/icons/Flow'
 //import Humidity from '../../assets/icons/Humidity'
 //import SolutionHeight from '../../assets/icons/SolutionHeight'
-import { vw } from 'react-native-expo-viewport-units'
-import { color } from 'react-native-reanimated'
+import { vh, vw, vmax } from 'react-native-expo-viewport-units'
+import BackgroundTheme from '../../assets/icons/BackgroundTheme'
+import { AnimatedCircularProgress } from 'react-native-circular-progress'
 //import { currentTemperature } from './styles'
 
 export default function A2_Temperature() {
+  const randomNumber = Math.floor(Math.random() * 90)
 
   return (
     <View style={styles.container}>
@@ -21,18 +26,13 @@ export default function A2_Temperature() {
         <Text style={styles.normalText}>Temperatura da solução</Text>
       </View>
       
-      <View style={styles.pointerBackground}>
-
-        <ProgressCircle
-          percent={90}
-          radius={vw(30)}
-          borderWidth={vw(5)}
-          color="#FAA8A2"
-          shadowColor="#f0f0f0"
-          bgColor="#f0f0f0"
+      <View style={styles.pointerContainer}>
+        <SemiCircleProgress
+          percentage={randomNumber}
+          progressColor={"#FAA8A2"}
         >
-          <Text style={{ fontSize: 18 }}>{'90%'}</Text>
-        </ProgressCircle>
+          <Text style={{ fontSize: vw(10), color: "#47566A" }}>{randomNumber}°C</Text>
+        </SemiCircleProgress>
       </View>
     </View>
   )

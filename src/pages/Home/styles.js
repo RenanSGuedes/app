@@ -27,8 +27,9 @@ const styles = StyleSheet.create({
   },
   titleMenu: {
     color: '#47566A',
-    fontSize: vw(4.6),
-    paddingBottom: vw(8)
+    fontSize: vw(4.2),
+    paddingLeft: vw(2),
+    fontWeight: 'bold'
   },
   backgroundPumpIcon: {
     backgroundColor: '#DAEBFF',
@@ -71,26 +72,11 @@ const styles = StyleSheet.create({
     fontSize: vw(3.2),
     color: '#47566A'
   },
-  buttonsContainer: {
-    flex: 1,
-    backgroundColor: 'magenta',
+  status: {
     flexDirection: 'row',
     alignItems: 'center',
-    justifyContent: 'space-evenly',
-    backgroundColor: '#F0F0F0',
-  },
-  touchable: {
-    width: vw(15),
-    height: vw(15),
-    borderRadius: vw(15)/2,
-    alignItems: 'center',
-    justifyContent: 'space-around',
-    backgroundColor: '#DAEBFF'
-  },
-  text: {
-    fontSize: vw(8),
-    color: '#47566A',
-  },
+    marginBottom: vw(5),
+  }
 })
 
 export default styles

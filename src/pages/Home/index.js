@@ -1,6 +1,7 @@
 import * as React from 'react'
 import { View, Text, Image } from 'react-native'
 import Tomato from '../../assets/icons/Tomato'
+import Status from '../../assets/icons/Status'
 import styles from './styles'
 import TomatoBackground from '../../assets/images/TomatoBackground.png'
 import Pump from '../../assets/icons/Pump'
@@ -14,7 +15,10 @@ export default function Home() {
       
       <View style={styles.infoMenu}>   
         <Tomato style={styles.tomato} width={vw(35)}/> 
-        <Text style={styles.titleMenu}>Status</Text>
+        <View style={styles.status}>
+          <Status />
+          <Text style={styles.titleMenu}>Status</Text>
+        </View>
 
         <View style={styles.block}>
           <View style={styles.layoutInRow}>

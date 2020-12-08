@@ -1,9 +1,5 @@
 import { StyleSheet } from 'react-native'
 import { vw } from 'react-native-expo-viewport-units';
-import Constants from 'expo-constants'
-//import handlePointer from '../../utils/handlePointer'
-
-export const currentTemperature = 25
 
 const styles = StyleSheet.create({
   container: {
@@ -14,29 +10,28 @@ const styles = StyleSheet.create({
     padding: vw(3),
   },
   boldText: {
-    fontWeight: 'bold',
-    fontSize: vw(3.7),
     color: '#47566A',
+    fontSize: vw(4.2),
+    fontWeight: 'bold'
   },
   normalText: {
     fontSize: vw(3.6),
     color: '#47566A'
   },
   pointerContainer: {
-    flex: 6,
-    backgroundColor: 'gray',
-    alignItems: 'center',
-    justifyContent: 'space-around'
-  },
-  pointerBackground: {
     flex: 1,
     alignItems: 'center',
-    justifyContent: 'space-around'
+    justifyContent: 'space-around',
   },
   text: {
     fontSize: vw(8),
     color: '#47566A',
   },
+  backgroundTheme: {
+    position: 'absolute',
+    zIndex: -1,
+    opacity: .5
+  }
 })
 
 export default styles
