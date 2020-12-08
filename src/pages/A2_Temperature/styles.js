@@ -11,7 +11,7 @@ const styles = StyleSheet.create({
   },
   boldText: {
     color: '#47566A',
-    fontSize: vw(4.2),
+    fontSize: vw(4),
     fontWeight: 'bold'
   },
   normalText: {
@@ -23,14 +23,9 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'space-around',
   },
-  text: {
-    fontSize: vw(8),
-    color: '#47566A',
-  },
-  backgroundTheme: {
-    position: 'absolute',
-    zIndex: -1,
-    opacity: .5
+  currentValue: {
+    fontSize: vw(10), 
+    color: "#47566A"
   }
 })
 

@@ -1,0 +1,1 @@
+export default handlePointer = (min, max, valueRead) => 100 * (valueRead - min)/(max - min)
