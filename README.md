@@ -1,3 +1,4 @@
+![](readme_assets/tomato1.png)
 # Rodando o projeto :open_file_folder:
 O projeto faz uso da abstração Expo. Para rodá-lo no seu dispositivo é preciso ter o `expo-cli` disponível. Porém, como ele depende de algum gerenciador de pacotes como o `npm` (node package manager), vamos à instalação deste.
 ## Instalando o npm :package:
