@@ -26,8 +26,9 @@ Rode o comando abaixo para instalar o `expo-cli` globalmente
 ```
 $ npm i -g expo-cli
 ```
-Caso o `git` não estiver instalado é preferível que seja feito o download do arquivo zip e sua extração no diretório de `mobile-app`. É provável que ao extrair o projeto outra pasta seja criada dentro do diretório de `mobile-app`, entretanto basta acessar a mesma via prompt e rodar
+Caso o `git` não estiver instalado é preferível que seja feito o download do arquivo zip e sua extração no diretório de `mobile-app`. É provável que ao extrair o projeto outra pasta seja criada dentro do diretório de `mobile-app`, entretanto basta acessar a mesma via prompt e rodar as linhas para instalar as dependências do projeto e rodar o mesmo em seguida, respectivamente
 ```
+$ npm install 
 $ expo start
 ```
 Em alguns instantes deve ser aberta uma aba no navegador com um QR code no canto inferior esquerdo. 
