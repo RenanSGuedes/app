@@ -1,17 +1,27 @@
 import React from 'react'
 import { View, Text, TouchableOpacity } from 'react-native'
+import { createStackNavigator, HeaderTitle } from '@react-navigation/stack'
+
 import styles from './styles'
 import Statistics from '../../assets/icons/Statistics'
-import StatisticsTheme from '../../assets/icons/StatisticsTheme'
 import { vw } from 'react-native-expo-viewport-units'
 
-export default function ListPlot() {
+import A2_ListPlot from '../A2_ListPlot'
+import B2_ListPlot from '../B2_ListPlot'
+import NFT_ListPlot from '../NFT_ListPlot'
+import { Header } from 'react-native/Libraries/NewAppScreen'
+
+const Stack = createStackNavigator()
+
+function ListPlotMenu({ navigation }) {
   return (
     <View style={styles.container}>
       <View style={styles.infoMenu}>
         <Text style={styles.titleMenu}>Gráficos</Text>
         
-        <TouchableOpacity style={styles.block}>
+        <TouchableOpacity style={styles.block}
+          onPress={() => navigation.navigate("A2_ListPlot")}
+        >
           <View style={styles.layoutInRow}>
             <View style={styles.backgroundStatisticsIcon}>
               <Statistics width={vw(6)}/>
@@ -23,7 +33,9 @@ export default function ListPlot() {
           </View>
         </TouchableOpacity>
 
-        <TouchableOpacity style={styles.block}>
+        <TouchableOpacity style={styles.block}
+          onPress={() => navigation.navigate("B2_ListPlot")}
+        >
           <View style={styles.layoutInRow}>
             <View style={styles.backgroundStatisticsIcon}>
               <Statistics width={vw(6)}/>
@@ -35,7 +47,9 @@ export default function ListPlot() {
           </View>
         </TouchableOpacity>
 
-        <TouchableOpacity style={styles.block}>
+        <TouchableOpacity style={styles.block}
+          onPress={() => navigation.navigate("NFT_ListPlot")}
+        >
           <View style={styles.layoutInRow}>
             <View style={styles.backgroundStatisticsIcon}>
               <Statistics width={vw(6)}/>
@@ -49,5 +63,19 @@ export default function ListPlot() {
       
       </View>
     </View>
+  )
+}
+
+export default function ListPlot() {
+  return (
+    <Stack.Navigator screenOptions={{ headerShown: false }}>
+      <Stack.Screen 
+        name="ListPlotMenu" 
+        component={ListPlotMenu} 
+      />
+      <Stack.Screen name="A2_ListPlot" component={A2_ListPlot}/>
+      <Stack.Screen name="B2_ListPlot" component={B2_ListPlot}/>
+      <Stack.Screen name="NFT_ListPlot" component={NFT_ListPlot}/>
+    </Stack.Navigator>
   )
 }
