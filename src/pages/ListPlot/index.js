@@ -1,6 +1,6 @@
 import React from 'react'
 import { View, Text, TouchableOpacity } from 'react-native'
-import { createStackNavigator, HeaderTitle } from '@react-navigation/stack'
+import { createStackNavigator } from '@react-navigation/stack'
 
 import styles from './styles'
 import Statistics from '../../assets/icons/Statistics'
@@ -9,7 +9,6 @@ import { vw } from 'react-native-expo-viewport-units'
 import A2_ListPlot from '../A2_ListPlot'
 import B2_ListPlot from '../B2_ListPlot'
 import NFT_ListPlot from '../NFT_ListPlot'
-import { Header } from 'react-native/Libraries/NewAppScreen'
 
 const Stack = createStackNavigator()
 
@@ -27,7 +26,7 @@ function ListPlotMenu({ navigation }) {
               <Statistics width={vw(6)}/>
             </View>
             <View>
-              <Text style={styles.normalText}>Substrato | Aberto</Text>
+              <Text style={styles.normalText}>Substrato | Fechado</Text>
               <Text style={styles.thinText}>Vazão, nível, umidade, temperatura</Text>
             </View>
           </View>
@@ -41,7 +40,7 @@ function ListPlotMenu({ navigation }) {
               <Statistics width={vw(6)}/>
             </View>
             <View>
-              <Text style={styles.normalText}>Substrato | Fechado</Text>
+              <Text style={styles.normalText}>Substrato | Aberto</Text>
               <Text style={styles.thinText}>Vazão, nível, umidade, temperatura</Text>
             </View>
           </View>
