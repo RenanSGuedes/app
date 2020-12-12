@@ -2,9 +2,9 @@ import React from 'react'
 import { View, Text, TouchableOpacity } from 'react-native'
 
 import B2_LevelPlot from '../B2_LevelPlot'
-import A2_FlowPlot from '../A2_FlowPlot'
-import A2_HumidityPlot from '../A2_HumidityPlot'
-import A2_TemperaturePlot from '../A2_TemperaturePlot'
+import B2_FlowPlot from '../B2_FlowPlot'
+import B2_HumidityPlot from '../B2_HumidityPlot'
+import B2_TemperaturePlot from '../B2_TemperaturePlot'
 
 import styles from './styles'
 
@@ -25,7 +25,7 @@ function B2_ListPlotMenu({ navigation }) {
           </TouchableOpacity>
         </View>
         <TouchableOpacity style={styles.block}
-          onPress={() => navigation.navigate('A2_FlowPlot')}
+          onPress={() => navigation.navigate('B2_FlowPlot')}
         >
           <View>
             <Text style={styles.normalText}>Vazão</Text>
@@ -41,7 +41,7 @@ function B2_ListPlotMenu({ navigation }) {
           </View>
         </TouchableOpacity>
         <TouchableOpacity style={styles.block}
-          onPress={() => navigation.navigate('A2_HumidityPlot')}
+          onPress={() => navigation.navigate('B2_HumidityPlot')}
         >
           <View>
             <Text style={styles.normalText}>Umidade do solo</Text>
@@ -49,7 +49,7 @@ function B2_ListPlotMenu({ navigation }) {
           </View>
         </TouchableOpacity>
         <TouchableOpacity style={styles.block}
-          onPress={() => navigation.navigate('A2_TemperaturePlot')}
+          onPress={() => navigation.navigate('B2_TemperaturePlot')}
         >
           <View>
             <Text style={styles.normalText}>Temperatura da solução</Text>
@@ -66,10 +66,10 @@ export default function B2_ListPlot() {
   return (
     <Stack.Navigator screenOptions={{ headerShown: false }}>
       <Stack.Screen name="B2_ListPlotMenu" component={B2_ListPlotMenu} />
-      <Stack.Screen name="A2_FlowPlot" component={A2_FlowPlot} />
+      <Stack.Screen name="B2_FlowPlot" component={B2_FlowPlot} />
       <Stack.Screen name="B2_LevelPlot" component={B2_LevelPlot} />
-      <Stack.Screen name="A2_HumidityPlot" component={A2_HumidityPlot} />
-      <Stack.Screen name="A2_TemperaturePlot" component={A2_TemperaturePlot} />
+      <Stack.Screen name="B2_HumidityPlot" component={B2_HumidityPlot} />
+      <Stack.Screen name="B2_TemperaturePlot" component={B2_TemperaturePlot} />
     </Stack.Navigator>
   )
 }

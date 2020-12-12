@@ -7,7 +7,7 @@ import {
   LineChart,
 } from "react-native-chart-kit";
 
-export default function A2_FlowPlot({ navigation }) {
+export default function A2_LevelPlot({ navigation }) {
   const maxValue = 30
 
   return (

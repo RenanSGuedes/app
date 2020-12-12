@@ -5,7 +5,7 @@ import styles from './styles'
 import SemiCircleProgress from '../../assets/Components/SemiCircleProgress'
 import handlePointer from '../../utils/handlePointer'
 
-export default function A2_Humidity() {
+export default function B2_Humidity() {
   const currentValue = 33
 
   return (

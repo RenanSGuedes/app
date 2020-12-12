@@ -7,7 +7,7 @@ import {
   LineChart,
 } from "react-native-chart-kit";
 
-export default function A2_TemperaturePlot({ navigation }) {
+export default function B2_TemperaturePlot({ navigation }) {
   const maxValue = 30
 
   return (
@@ -15,7 +15,7 @@ export default function A2_TemperaturePlot({ navigation }) {
       <View style={styles.infoMenu}>  
 
         <View style={styles.header}>
-        <Text style={styles.boldText}>Substrato | Fechado <Text style={{ color: 'rgba(71, 86, 106, .3)'}}>{'>'}</Text> Temperatura</Text>
+        <Text style={styles.boldText}>Substrato | Aberto <Text style={{ color: 'rgba(71, 86, 106, .3)'}}>{'>'}</Text> Temperatura</Text>
           <TouchableOpacity 
             onPress={() => navigation.goBack()}
           >

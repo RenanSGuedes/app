@@ -7,15 +7,15 @@ import {
   LineChart,
 } from "react-native-chart-kit";
 
-export default function A2_TemperaturePlot({ navigation }) {
-  const maxValue = 30
+export default function B2_FlowPlot({ navigation }) {
+  const maxValue = 6
 
   return (
     <View style={styles.container}>
       <View style={styles.infoMenu}>  
 
         <View style={styles.header}>
-        <Text style={styles.boldText}>Substrato | Fechado <Text style={{ color: 'rgba(71, 86, 106, .3)'}}>{'>'}</Text> Temperatura</Text>
+        <Text style={styles.boldText}>Substrato | Aberto <Text style={{ color: 'rgba(71, 86, 106, .3)'}}>{'>'}</Text> Vazão </Text>
           <TouchableOpacity 
             onPress={() => navigation.goBack()}
           >
@@ -43,11 +43,11 @@ export default function A2_TemperaturePlot({ navigation }) {
                   ]
                 }
               ],
-              legend: ['Temperatura da solução']
+              legend: ['Vazão']
             }}
             width={vw(90)} // from react-native
             height={vw(55)}
-            yAxisSuffix="°C"
+            yAxisSuffix=" L/h"
             yAxisInterval={1} // optional, defaults to 1
             chartConfig={{
               backgroundColor: "#DAEBFF",
