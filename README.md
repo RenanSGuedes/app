@@ -1,5 +1,13 @@
 ![](readme_assets/tomato1.png)
+<p align="center">
+    <img width="80%" src="readme_assets/component.svg">
+</p>
 # Rodando o projeto :open_file_folder:
+
+<p align="center">
+    <img src="https://i.imgur.com/8I7295H.png">
+</p>
+
 O projeto faz uso da abstração Expo. Para rodá-lo no seu dispositivo é preciso ter o `expo-cli` disponível. Porém, como ele depende de algum gerenciador de pacotes como o `npm` (node package manager), vamos à instalação deste.
 ## Instalando o npm :package:
 Se a sua máquina apresentar o NodeJS o npm estará disponível como consequência, se não faça o download nesse [link](https://nodejs.org/en/) (Recomenda-se a versão LTS - long-term support).
